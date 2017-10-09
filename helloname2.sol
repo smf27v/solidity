@@ -1,11 +1,11 @@
 pragma solidity ^0.4.0; //Solidity Version
 
-contract HelloWorldContract {  //Create a Contract
+contract HelloNameContract {  //Create a Contract
     string name = 'Hello Sergio';  //Create a variable string
     address owner;
 
     // internal: keyword to indicate that the function can only be called by the smart contract itself, not externally.
-    function HelloWorldContract() internal{ //Create a function to initialize the contract.
+    function HelloNameContract() public{ //Create a function to initialize the contract.
         owner = msg.sender;
     }
     function getName() public constant returns(string){  //Create a function for return the name.  Declare public for all ussers to acces
