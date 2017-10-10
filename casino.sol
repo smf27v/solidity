@@ -13,7 +13,7 @@ contract CoinFlip{
     function FlipCoin() public payable{
         if((block.timestamp % 2) == 0){
             if(this.balance < ((msg.value*payPercentaje)/100)){
-                Status('Congratulations, You are the best!!', msg.sender, this.balance);
+                Status('Congratulations, You are the , but Sorry, we didn´t have enought money, we will deposit everithing we have!!', msg.sender, this.balance);
                 msg.sender.transfer(this.balance);
             }else{
                 Status('Congratulations, You won!', msg.sender, msg.value * (100 + payPercentaje)/100);
